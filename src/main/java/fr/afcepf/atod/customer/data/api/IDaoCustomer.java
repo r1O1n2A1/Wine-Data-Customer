@@ -6,23 +6,18 @@ import fr.afcepf.atod.wine.entity.Customer;
 import fr.afcepf.atod.wine.entity.User;
 import java.io.Serializable;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- *
- * @author ronan
+ * Database access for an object of type {@link Customer}
+ * @author ronan 
  */
 public interface IDaoCustomer extends IDaoGeneric<User, Integer>{
     /**
-     * 
-     * @param mail
-     * @param password
-     * @return
-     * @throws WineException 
+     * Method allowing a user to connect
+     * to our app
+     * @param mail {@link String}
+     * @param password {@link String}
+     * @return {@link User}
+     * @throws WineException {@link WineException}
      */
     User connect(String mail, String password) throws WineException;
     
